@@ -23,7 +23,7 @@ MVSA-Single is a multimodal sentiment analysis dataset comprising image-text pai
 
 ### MOSI
 
-MOSI is a benchmark for multimodal sentiment analysis. We refer **to** the script provided by the [MMML repository](https://github.com/zehuiwu/MMML/blob/main/extract_audio.py) for data preprocessing.  See `/dataset/data/MOSI/mp4_to_wav_jpg.py`. Before using the preprocessed dataset, please modify `root_dir` in `/dataset/MOSIDataset.py`.
+MOSI is a benchmark for multimodal sentiment analysis. We refer to the script provided by the [MMML repository](https://github.com/zehuiwu/MMML/blob/main/extract_audio.py) for data preprocessing.  See `/dataset/data/MOSI/mp4_to_wav_jpg.py`. Before using the preprocessed dataset, please modify `root_dir` in `/dataset/MOSIDataset.py`.
 
 ### NVGesture
 
@@ -53,7 +53,7 @@ bash /benchmark/test.sh
 
 ## Contact us 
 
-If you have any detailed questions or suggestions, you can email us: fivemeng3@gmail.com or shicaiwei@uestc.edu.cn.
+If you have any detailed questions or suggestions, you can email us: fivemeng3@gmail.com.
 
 
 
