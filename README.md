@@ -1,6 +1,6 @@
 # GIML
 
-Here is the official code for **"General Incomplete Multimodal Learning via Dynamic Quality Perception"**, which proposes a general incomplete multimodal learning framework (GIML) that unifies intra-modality and inter-modality missing through dynamic quality perception, enabling their joint optimization within a single stage. Please refer to our [ECCV 2026 paper]() for more details.
+Here is the official code for **"General Incomplete Multimodal Learning via Dynamic Quality Perception"**, which proposes a general incomplete multimodal learning framework (GIML) that unifies intra-modality and inter-modality missing through dynamic quality perception, enabling their joint optimization within a single stage. Please refer to our [ECCV 2026 paper](https://arxiv.org/pdf/2607.06943) for more details.
 
 ## Main Dependencies
 
