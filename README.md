@@ -23,11 +23,11 @@ MVSA-Single is a multimodal sentiment analysis dataset comprising image-text pai
 
 ### MOSI
 
-MOSI is a benchmark for multimodal sentiment analysis. We refer to the script provided by the [MMML repository](https://github.com/zehuiwu/MMML/blob/main/extract_audio.py) for data preprocessing.  See `/dataset/data/MOSI/mp4_to_wav_jpg.py`. Before using the preprocessed dataset, please modify `root_dir` in `/dataset/MOSIDataset.py`.
+MOSI is a benchmark for multimodal sentiment analysis. We refer to the script provided by the [official implementation of MMML (NAACL2024 oral)](https://github.com/zehuiwu/MMML/blob/main/extract_audio.py) for data preprocessing.  See `/dataset/data/MOSI/mp4_to_wav_jpg.py`. Before using the preprocessed dataset, please modify `root_dir` in `/dataset/MOSIDataset.py`.
 
 ### NVGesture
 
-NVGesture is a video dataset for dynamic hand gesture recognition. We adopt the dataset source and preprocessing pipeline from the [Real-time-GesRec repository](https://github.com/ahmetgunduz/Real-time-GesRec), which extracts key frames and motion features for action recognition using a sliding-window approach with 3D CNNs.  See `/dataset/data/NVGesture`. Before using the processed dataset, please modify the `annotation_path` and `root_path` in `/dataset/NVGestureDataset.py`. 
+NVGesture is a video dataset for dynamic hand gesture recognition. We adopt the dataset source and preprocessing pipeline from the [Real-time-GesRec repository](https://github.com/ahmetgunduz/Real-time-GesRec), which extracts key frames and motion features for action recognition using a sliding-window approach with 3D CNNs.  See `/dataset/data/NVGesture/`. Before using the processed dataset, please modify the `annotation_path` and `root_path` in `/dataset/NVGestureDataset.py`. 
 
 ## Train 
 
