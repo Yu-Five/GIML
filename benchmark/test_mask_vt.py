@@ -13,6 +13,7 @@ import collections
 
 
 from utils.utils import setup_seed, weight_init
+
 setup_seed(seed=42)
 
 
