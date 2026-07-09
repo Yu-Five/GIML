@@ -248,50 +248,7 @@ def main():
     os.environ["CUDA_VISIBLE_DEVICES"] = args.gpu_ids
     device = torch.device(args.device if torch.cuda.is_available() else "cpu")
 
-    # Gaussian
-    weights_Gaussian = "/root/autodl-tmp/data/results/mvsa/best_model_of_dataset_MVSA_Single_Normal_gamma_4.0_pe_1_beta1e-05_optimizer_sgd_modulate_starts_0_ends_50_epoch_77_acc_0.7364864864864864.pth"
-    IGML_test_scenarios_Gaussian = {
-        "IGML_vclean_aclean_vt": ('clean', 'clean', 'vt', "IGML", weights_Gaussian, 'Gaussian'),
-        "IGML_vclean_aclean_a": ('clean', 'clean', 'a', "IGML", weights_Gaussian, 'Gaussian'),
-        "IGML_vclean_aclean_v": ('clean', 'clean', 'v', "IGML", weights_Gaussian, 'Gaussian'),
-        "IGML_vlow_alow_vt": ('low', 'low', 'vt', "IGML", weights_Gaussian, 'Gaussian'),
-        "IGML_vlow_alow_a": ('low', 'low', 'a', "IGML", weights_Gaussian, 'Gaussian'),
-        "IGML_vlow_alow_v": ('low', 'low', 'v', "IGML", weights_Gaussian, 'Gaussian'),
-        "IGML_vmedium_amedium_vt": ('medium', 'medium', 'vt', "IGML", weights_Gaussian, 'Gaussian'),
-        "IGML_vmedium_amedium_a": ('medium', 'medium', 'a', "IGML", weights_Gaussian, 'Gaussian'),
-        "IGML_vmedium_amedium_v": ('medium', 'medium', 'v', "IGML", weights_Gaussian, 'Gaussian'),
-        "IGML_vlow_amedium_vt": ('low', 'medium', 'vt', "IGML", weights_Gaussian, 'Gaussian'),
-        "IGML_vmedium_alow_a": ('medium', 'low', 'vt', "IGML", weights_Gaussian, 'Gaussian'),
-        "IGML_vlow_ahigh_v": ('low', 'high', 'vt', "IGML", weights_Gaussian, 'Gaussian'),
-        "IGML_vhigh_alow_v": ('high', 'low', 'vt', "IGML", weights_Gaussian, 'Gaussian'),
-        "IGML_vhigh_amedium_v": ('high', 'medium', 'vt', "IGML", weights_Gaussian, 'Gaussian'),
-        "IGML_vmedium_ahigh_v": ('medium', 'high', 'vt', "IGML", weights_Gaussian, 'Gaussian'),
-    }
-    
-    tmdc_weights_Gaussian = "/mengy2/check2/OGM_PE_AGL/results_tmdc/CREMAD_best_second_stage_acc0.7024456521739131_epochs100_epoch54.pth"
-    tmdc_test_scenarios_Gaussian = {
-        "TMDC_vclean_aclean_vt": ('clean', 'clean', 'vt', "TMDC", tmdc_weights_Gaussian, 'Gaussian'),
-        "TMDC_vclean_aclean_a": ('clean', 'clean', 'a', "TMDC", tmdc_weights_Gaussian, 'Gaussian'),
-        "TMDC_vclean_aclean_v": ('clean', 'clean', 'v', "TMDC", tmdc_weights_Gaussian, 'Gaussian'),
-        "TMDC_vlow_alow_vt": ('low', 'low', 'vt', "TMDC", tmdc_weights_Gaussian, 'Gaussian'),
-        "TMDC_vlow_alow_a": ('low', 'low', 'a', "TMDC", tmdc_weights_Gaussian, 'Gaussian'),
-        "TMDC_vlow_alow_v": ('low', 'low', 'v', "TMDC", tmdc_weights_Gaussian, 'Gaussian'),
-        "TMDC_vmedium_amedium_vt": ('medium', 'medium', 'vt', "TMDC", tmdc_weights_Gaussian, 'Gaussian'),
-        "TMDC_vmedium_amedium_a": ('medium', 'medium', 'a', "TMDC", tmdc_weights_Gaussian, 'Gaussian'),
-        "TMDC_vmedium_amedium_v": ('medium', 'medium', 'v', "TMDC", tmdc_weights_Gaussian, 'Gaussian'),
-        "TMDC_vlow_amedium_vt": ('low', 'medium', 'vt', "TMDC", tmdc_weights_Gaussian, 'Gaussian'),
-        "TMDC_vmedium_alow_a": ('medium', 'low', 'vt', "TMDC", tmdc_weights_Gaussian, 'Gaussian'),
-        "TMDC_vlow_ahigh_v": ('low', 'high', 'vt', "TMDC", tmdc_weights_Gaussian, 'Gaussian'),
-        "TMDC_vhigh_alow_v": ('high', 'low', 'vt', "TMDC", tmdc_weights_Gaussian, 'Gaussian'),
-        "TMDC_vhigh_amedium_v": ('high', 'medium', 'vt', "TMDC", tmdc_weights_Gaussian, 'Gaussian'),
-        "TMDC_vmedium_ahigh_v": ('medium', 'high', 'vt', "TMDC", tmdc_weights_Gaussian, 'Gaussian'),
-    }
-    
-    
     # mvsa-single
-    # weights_IGML_mvsa = "/root/autodl-tmp/data/results/mvsa_quanzhong/best_model_of_dataset_MVSA_Single_Normal_gamma_5.0_pe_1_beta1e-05_optimizer_sgd_modulate_starts_0_ends_50_epoch_86_acc_0.7364864864864865.pth"
-    # weights_IGML_mvsa = "/root/autodl-tmp/data/results/mvsa/best_model_of_dataset_MVSA_Single_Normal_gamma_4.0_pe_1_beta1e-05_optimizer_sgd_modulate_starts_0_ends_50_epoch_78_acc_0.7306949806949807.pth"
-    # weights_IGML_mvsa = "/root/autodl-tmp/data/results/mvsa_quanzhong/best_model_of_dataset_MVSA_Single_Normal_gamma_4.0_pe_1_beta1e-05_optimizer_sgd_modulate_starts_0_ends_50_epoch_94_acc_0.7316602316602316.pth"
     weights_IGML_mvsa = "/root/autodl-tmp/data/results/mvsa/best_model_of_dataset_MVSA_Single_Normal_gamma_4.0_pe_1_beta1e-05_optimizer_sgd_modulate_starts_0_ends_50_epoch_78_acc_0.7364864864864864.pth"
     test_scenarios_mvsa = {
         "IGML_v0.0_t0.0_vt": (0.0, 0.0, 'vt', "IGML", weights_IGML_mvsa, 'Mask'),
@@ -311,24 +268,7 @@ def main():
         "IGML_v0.7_t0.3_vt": (0.7, 0.3, 'vt', "IGML", weights_IGML_mvsa, 'Mask'),
     }
 
-    IGML_test_scenarios_Gaussian = {
-        "IGML_vclean_aclean_vt": ('clean', 'clean', 'vt', "IGML", weights_IGML_mvsa, 'Gaussian'),
-        "IGML_vclean_aclean_a": ('clean', 'clean', 'a', "IGML", weights_IGML_mvsa, 'Gaussian'),
-        "IGML_vclean_aclean_v": ('clean', 'clean', 'v', "IGML", weights_IGML_mvsa, 'Gaussian'),
-        "IGML_vlow_alow_vt": ('low', 'low', 'vt', "IGML", weights_IGML_mvsa, 'Gaussian'),
-        "IGML_vlow_alow_a": ('low', 'low', 'a', "IGML", weights_IGML_mvsa, 'Gaussian'),
-        "IGML_vlow_alow_v": ('low', 'low', 'v', "IGML", weights_IGML_mvsa, 'Gaussian'),
-        "IGML_vmedium_amedium_vt": ('medium', 'medium', 'vt', "IGML", weights_IGML_mvsa, 'Gaussian'),
-        "IGML_vmedium_amedium_a": ('medium', 'medium', 'a', "IGML", weights_IGML_mvsa, 'Gaussian'),
-        "IGML_vmedium_amedium_v": ('medium', 'medium', 'v', "IGML", weights_IGML_mvsa, 'Gaussian'),
-        "IGML_vlow_amedium_vt": ('low', 'medium', 'vt', "IGML", weights_IGML_mvsa, 'Gaussian'),
-        "IGML_vmedium_alow_a": ('medium', 'low', 'vt', "IGML", weights_IGML_mvsa, 'Gaussian'),
-        "IGML_vlow_ahigh_v": ('low', 'high', 'vt', "IGML", weights_IGML_mvsa, 'Gaussian'),
-        "IGML_vhigh_alow_v": ('high', 'low', 'vt', "IGML", weights_IGML_mvsa, 'Gaussian'),
-        "IGML_vhigh_amedium_v": ('high', 'medium', 'vt', "IGML", weights_IGML_mvsa, 'Gaussian'),
-        "IGML_vmedium_ahigh_v": ('medium', 'high', 'vt', "IGML", weights_IGML_mvsa, 'Gaussian'),
-    }
-
+    
     weights_TMDC_mvsa = "/root/autodl-tmp/data/results/mvsa_tmdc/MVSA_Single_best_second_stage_acc0.7324_epochs100_epoch76.pth"
     test_tmdc_scenarios_mvsa = {
         "TMDC_v0.0_t0.0_vt": (0.0, 0.0, 'vt', "TMDC", weights_TMDC_mvsa, 'Mask'),
