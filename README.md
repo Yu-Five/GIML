@@ -6,7 +6,7 @@ Here is the official code for **"General Incomplete Multimodal Learning via Dyna
 
 - Ubuntu 20.04  
 - CUDA 11.3  
-- PyTorch 1.11  
+- PyTorch 1.12  
 - Python 3.8.6  
 
 ## Data
